@@ -32,14 +32,9 @@ gulp.task('imagemin', function () {
         .pipe(gulp.dest('app/images'));
 });
 
-gulp.task('bowerimport', function(){
-	return gulp.src('bower_components/**/*.*')
-		gulp.dest('./app')	
-})
-
 // Browser Sync
 // Static server
-gulp.task('serve', ['sass', 'imagemin', 'bowerimport'], function() {
+gulp.task('serve', ['sass', 'imagemin'], function() {
     browserSync.init({
         server: {
             baseDir: "./app/"

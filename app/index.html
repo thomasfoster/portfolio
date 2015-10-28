@@ -7,31 +7,22 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
   
   <script src="app.js"></script>
+  <link rel="stylesheet" href="/css/vendor/skeleton.css"> 
   <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body ng-app="portfolio" ng-controller="MainCtrl">
   
-<div class="header">
-  <div class="container">
-    <h1>Header</h1>
-    XXYZZ1122
-  </div>
-</div>
+<div id="header" ng-include="'/template/header.tpl.html'"></div>
 
-<div class="content">
+<div class="main">
   <div class="container">
     <h1>Content</h1>
     3344XXYZZ
   </div>
 </div>
 
-<div class="footer">
-  <div class="container">
-    <h1>Footer</h1>
-    4455XXYZZ
-  </div>
-</div>
+<div id="header" ng-include="'/template/footer.tpl.html'"></div>
 
 <!-- 
   <div class="row">
