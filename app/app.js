@@ -8,12 +8,12 @@ app.config([
 		$stateProvider
 		.state('home', {
 			url: '/home',
-			templateUrl: '/home.html',
+			templateUrl: '/template/home.tpl.html',
 			controller: 'MainCtrl'
 		})
 		.state('about', {
 			url: '/about',
-			templateUrl: '/about.html',
+			templateUrl: '/template/about.tpl.html',
 			controller: 'MainCtrl'
 		});
 		// .state('rocket', {
@@ -28,10 +28,41 @@ app.config([
 
 app.controller('MainCtrl', [
 	'$scope', 
-	function($scope){
+	function($scope){ //, $state){
+		//$scope.Model = $scope.Model || {Name : "xxx"};
 		//$scope.title = 'Port';
+		// $scope.$state = $state;
+		//alert($state)
+//		$('.main.home').css('height', $(window).height() + 'px');
+		$('.main.home').css('height', window.innerHeight + 'px'); 
+		$('.main').css('padding-top', $('.header').height() + 'px')
+		$(window).resize(function(){
+			$('.main.home').css('height', window.innerHeight + 'px'); 
+			$('.main').css('padding-top', $('.header').height() + 'px')
+		});
+		$scope.portItem = [
+			{
+				name: "Poloroid",
+				img: 'https://placehold.it/400x400',
+				tagline: 'Lorem Ipsum one sodle set amut adbo aleime ao'
+			},
+			{
+				name: "11Poloroid",
+				img: 'https://placehold.it/400x400',
+				tagline: '1111Lorem Ipsum one sodle set amut adbo aleime ao'
+			},
+			{
+				name: "22121Poloroid",
+				img: 'https://placehold.it/400x400',
+				tagline: '2222Lorem Ipsum one sodle set amut adbo aleime ao'
+			},
+			{
+				name: "333Poloroid",
+				img: 'https://placehold.it/400x400',
+				tagline: '33333Lorem Ipsum one sodle set amut adbo aleime ao'
+			},
 
-
+		];
 	}
 ]);
 
