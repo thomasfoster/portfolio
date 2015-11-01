@@ -1,54 +1,35 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300);
 @import './vendor/normalize.css';
+// Importing Susy  grid
+@import '../susyex/stylesheets/style.css';
+
+
+////////////////////
+// Global ELements
+////////////////////
 
 * { box-sizing: border-box }
 body {
 	//background: rgba(0,0,0,.1);
 	color: black;   
 	font-family: 'Roboto Condensed', sans-serif;
+
 }   
-
-.container {
-	// max-width: 980px;
-	// margin: 20px auto;
-}  
-
-
-
-.footer {
-	background: rgba(0,0,0,.3);
-}
 .container {
 	padding: 10px 0;
 }
-h1 {
+h1 { 
 	margin-top: 0;
 }
-
-.hp-hero {
-	width: 450px;
-	left: 50%;
-	position: relative;
-	margin-left: -225px;
-	background: rgba(0, 255, 255, 0.34);
-	padding: 25px;
-	margin-top: 10%;
-
-}
-.home .container {
-	height: 100%;
-}
-.main.home {
-	background: url(http://localhost:3000/images-raw/bkrdTest.jpg) fixed;
-	background-size: cover;
-}
-
-
+  
+/////////////
 // header 
+/////////////
 #header {
 	position: relative;
 	z-index: 3;
 }
+
 .header {
 	position:fixed;
 	width: 100%;
@@ -85,6 +66,59 @@ h1 {
 	}
 }
 
+/////////////////////
+// Home Page
+/////////////////////
+
+
+.home .container {
+	height: 100%;
+}
+.main.home {
+	background: url(http://localhost:3000/images-raw/bkrdTest.jpg) fixed;
+	background-size: cover;
+}
+
+
+
+
+// Portfolio Section on Home Page
+.port-item {
+	position:relative;
+	img {
+		max-width: 100%;
+	}
+	&__title {
+		position: absolute;
+		background:red;
+		width:100%;
+		//display: none;
+		opacity: 0;
+		transition: all .3s;
+		bottom: 15%;
+	    padding: 5px 15px;
+	   // transform: rotateX(90deg); 
+	    //transform: skewY(990deg);
+	    transform: scale(0.9); 
+	}
+	&__description {
+		display: none;
+	}
+	&:hover {
+		.port-item {
+			&__title {
+				//display: block;
+				opacity: 1;
+				//bottom: 15%;
+				//transform: rotateX(0deg); 
+				//transform: skewY(0deg); 
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+
 
 @media (max-width: 767px) {
 	.header__nav {
@@ -92,4 +126,13 @@ h1 {
 			display: none;
 		}
 	}
+}
+
+
+///////////////////
+// Footer
+///////////////////
+
+.footer {
+	background: rgba(0,0,0,.3);
 }

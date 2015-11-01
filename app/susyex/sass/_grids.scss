@@ -1,0 +1,11 @@
+// Requirements
+// ============
+
+@import "susy";
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+);
+
+$susy: layout(12 0.25 fluid float outside);

@@ -1,28 +1,19 @@
 <div class="main home">
   <div class="container">
     <div class="port-container" ng-controller="MainCtrl">
-    	<div class="port-item" ng-repeat="item in portItem">
-    		<span>{{item.name}}</span>
-    		<span><img src="{{item.img}}"></span>
-    		<span>{{item.tagline}}</span>
+    	<div 
+    		class="port-item one-4" 
+    		ng-repeat="item in portItem"
+    		ng-class="{last: $index % 4 === 0}">
+    		<div class="port-item__title">{{item.name}}</div>
+    		<div class="port-item__image"><img src="{{item.img}}"></div>
+    		<div class="port-item__description">{{item.tagline}}</div>
     	</div>
     </div>
 
 </div>
-
-
+  
+ 
 <style>
-.port-item {
-	float: left;
-	height: 50px;
-	width: 23%;
-	margin-right: 2%;
-}
-.port-item img {
-	//max-height: 100%;
-	max-width: 100%;
-}
-.port-item span {
-	display: block;
-}
+
 </style>

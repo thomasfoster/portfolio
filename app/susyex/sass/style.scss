@@ -1,0 +1,110 @@
+// Screen
+// ======
+
+
+@import 'grids';
+
+//@import 'breakpoint';
+
+header {
+    @include full;
+} 
+.wrapper {
+    @include container();
+    max-width: 980px;
+    .one-third {
+        @include span(4);
+    }
+    .last {
+        @include omega;
+    }
+
+    &.card-wrapper {
+        background: rgba(255,0,255,.15);
+    }
+}
+
+
+
+// all grid items
+.one-1,
+
+//half
+.one-2,
+
+//third
+.one-3,
+.two-3,
+
+//fourth
+.one-4,
+.two-4,
+.three-4,
+
+//sixth
+.one-6,
+.two-6,
+.three-6,
+.four-6,
+.five-6,
+
+// twelfth
+.one-12,
+.two-12,
+.three-12,
+.four-12,
+.five-12,
+.six-12,
+.seven-12,
+.eight-12,
+.nine-12,
+.ten-12,
+.eleven-12 {
+    margin-bottom: 20px;
+    &.last {
+        @include omega;
+    }
+}
+
+
+
+//full
+.one-1 { @include span(12);}
+
+//half
+.one-2 {@include span(6);}
+
+//third
+.one-3 {@include span(4);}
+.two-3 {@include span(8);}
+
+//fourth
+.one-4 {@include span(3);}
+.two-4 {@include span(6);}
+.three-4 {@include span(9);}
+
+//sixth
+.one-6 {@include span(2);}
+.two-6 {@include span(4);}
+.three-6 {@include span(6);}
+.four-6 {@include span(8);}
+.five-6 {@include span(10);}
+
+// twelfth
+.one-12 {@include span(1);}
+.two-12 {@include span(2);}
+.three-12 {@include span(3);}
+.four-12 {@include span(4);}
+.five-12 {@include span(5);}
+.six-12 {@include span(6);}
+.seven-12 {@include span(7);}
+.eight-12 {@include span(8);}
+.nine-12 {@include span(9);}
+.ten-12 {@include span(10);}
+.eleven-12 {@include span(11);}
+
+
+//
+//.container {
+//    @include full;
+//} 
